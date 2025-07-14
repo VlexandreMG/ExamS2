@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['fichier']))
 
     if (move_uploaded_file($file['tmp_name'],$chemin . $Newname)) 
     {
-        ajouter_objet($_POST['nom'],$_POST['categorie'],$_SESSION['idUser'],$chemin);
+        ajouter_objet($_POST['nom'],$_POST['categorie'],$_SESSION['idUser'],$chemin . $Newname);
         header('Location: ../PAGE/Liste_objet.php');
     }
     else 
