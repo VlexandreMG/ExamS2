@@ -14,6 +14,8 @@
             -Message d'erreur [x]
         -Liste des objets []
             -Fonction []
-                - Vue globale []
-            
+                -Fonction [x]
+                - Vue globale [x]
         -Filtre par catégorie []
+                -Fonction[x]
+    - CSS globale []

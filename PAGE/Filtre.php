@@ -1,4 +1,6 @@
 <?php 
+    include('../INC/Fonction.php');
+
     $idc = $_POST['idc'];
 
     $list_F = get_liste_objet_filtrer_categorie($idc);
@@ -13,7 +15,9 @@
 </head>
 <body>
     <?php foreach ($list_F as $li) { ?>
-        <?php echo $li['nom_objet'] ?>
+        <?php echo $li['nom_objet'] , "</br>" ?>
     <?php } ?>
+
+    <a href="Liste_objet.php">Retour</a>
 </body>
 </html>
