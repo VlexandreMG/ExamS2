@@ -6,7 +6,8 @@ include("../INC/Fonction.php");
 $chemin ='../ASSETS/IMAGE/';
 
 $taille_max = 120 * 1024 * 1024;// 120 Mo
-$fichier_permise = ['Image/jpg','Image/png','Image/jpeg','Image/gif','Image/webp'];
+
+$fichier_permise = ['image/jpg','image/png','image/jpeg','image/gif','image/webp'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['fichier'])) 
 {
@@ -36,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['fichier']))
 
     if (move_uploaded_file($file['tmp_name'],$chemin . $Newname)) 
     {
-        // insert_video($Newname,$_SESSION['idUser']);
+        ajouter_objet($_POST['nom'],$_POST['categorie'],$_SESSION['idUser'],$chemin);
         header('Location: ../PAGE/Liste_objet.php');
     }
     else 

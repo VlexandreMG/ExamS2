@@ -72,6 +72,42 @@
        return $retour;
     }
 
+    function ajouter_image_objet($id_objet,$chemin_img)
+    {
+        $base = connexion();
+
+        $prompt = "INSERT INTO b_images_objet(id_objet,nom_image) VALUES('%s','%s')";
+        $prompt = sprintf($prompt,$id_objet,$chemin_img);
+
+        mysqli_query($base,$prompt);        
+    }
+
+    function get_id_objet($nom)
+    {
+        $base = connexion();
+
+        $prompt = "SELECT id_objet FROM b_objet WHERE nom_objet = '%s' ";
+        $prompt = sprintf($prompt,$nom);
+
+        $result = mysqli_query($base,$prompt);
+
+        $retour = mysqli_fetch_assoc($result);
+
+        return $retour['id_objet'];
+    }
+
+    function ajouter_objet($nom_o,$id_c,$idU,$chemin_img)
+    {
+        $base = connexion();
+
+        $prompt = "INSERT INTO b_objet(nom_objet,id_categorie,id_membre) VALUES('%s','%s','%s')";
+        $prompt = sprintf($prompt,$nom_o,$id_c,$idU);
+
+        mysqli_query($base,$prompt);
+        
+        ajouter_image_objet(get_id_objet($nom_o),$chemin_img);
+    }
+
     function get_liste_objet_filtrer_categorie($id_categorie) {
         $base = connexion();
 
