@@ -12,9 +12,9 @@ $ville = $_POST['ville'];
 
 
 
-if(isset($nom) && isset($date_naissace) && isset($email) && isset($mdp) && isset($genre) && isset($ville) )
+if($nom != null || $date_naissace != null || $email != null || $mdp != null || $genre != null || $ville != null )
 {
-    $membre = get_sign_in($nom,$date_naissance,$email,$mdp,$genre,$ville);
+    $membre = get_sign_in($nom,$date_naissance,$genre,$email,$ville,$mdp);
     header('Location: ../PAGE/Login.php');
 }
 else

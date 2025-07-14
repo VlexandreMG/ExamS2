@@ -17,9 +17,9 @@
 
     function get_sign_in($nom,$date,$genre,$email,$ville,$mdp)
     {
-        $sql = "INSERT INTO b_membre (nom, date_naissance, genre, email, ville, mdp) VALUES ('%s','%s','%s','%s','%s','%s')";
-        $requete = sprintf($sql,$nom,$date,$genre,$email,$ville,$mdp);
-        $requette  = mysqli_query(dbconnect(),$requete);
+        $sql = "INSERT INTO b_membre (nom, date_naissance, email, genre, ville, mdp) VALUES ('%s','%s','%s','%s','%s','%s')";
+        $sql = sprintf($sql,$nom,$date,$email,$genre,$ville,$mdp);
+        mysqli_query(connexion(),$sql);
     }
 
     function big_view() {
@@ -131,4 +131,21 @@
         return $retour;
     }
     
+    function get_all_membre()
+    {
+        $base = connexion();
+
+        $prompt = "SELECT * FROM b_membre";
+
+        $result = mysqli_query($base,$prompt);
+
+        $retour = array();
+
+        while ($retour1 = mysqli_fetch_assoc($result)) 
+        {
+            $retour[] = $retour1;
+        }
+
+        return $retour;
+    }
 ?>
