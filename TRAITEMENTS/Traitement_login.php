@@ -10,11 +10,11 @@
 
     if($membre['email'] == null || $membre['mdp'] == null)
     {
-        echo "TSISY";
+        header('Location: ');
     }
     else
     {
-        echo $membre['id_membre'];
+        header('');
     }
     
 ?>

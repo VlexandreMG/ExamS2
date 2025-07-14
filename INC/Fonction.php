@@ -14,4 +14,12 @@
 
         return $retour;
     }
+
+    function get_sign_in($nom,$date,$genre,$email,$ville,$mdp)
+    {
+        $sql = "INSERT INTO membre (nom, date_naissance, genre, email, ville, mdp) VALUES ('%s','%s','%s','%s','%s','%s')";
+        $requete = sprintf($sql,$nom,$date,$genre,$email,$ville,$mdp);
+        $requette  = mysqli_query(dbconnect(),$requete);
+    }
+    
 ?>
