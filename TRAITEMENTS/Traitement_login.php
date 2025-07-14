@@ -14,6 +14,7 @@
     }
     else
     {
+        $_SESSION['idUser'] = $membre['id_membre'];
         header('Location: ../PAGE/Liste_objet.php');
     }
     

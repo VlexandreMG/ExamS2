@@ -15,6 +15,7 @@
     
 </head>
 <body class="bg-light">
+<a href="Ajout_objet.php">Ajouter</a>
     <div class="container py-5">
         <div class="card shadow mb-4">
             <div class="card-header bg-primary text-white">
