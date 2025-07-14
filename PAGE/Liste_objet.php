@@ -36,6 +36,15 @@
                             <tr>
                                 <td><?php echo $ob['nom_objet'] ?></td>
                                 <td><?php echo $ob['nom_categorie'] ?></td>
+                                <td>
+                                    <form action="../TRAITEMENTS/Traitement_emprunt.php?id_objet=<?php echo $ob['id_objet'] ?>" method="post">
+                                        <input type="number" name="nbjour">
+                                        <input type="submit" value="Emprunt">
+                                    </form>
+                                </td>
+                                <td>
+                                    dispo
+                                </td>
                             </tr> 
                             <?php } ?>
                         </tbody>

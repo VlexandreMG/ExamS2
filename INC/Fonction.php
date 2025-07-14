@@ -148,4 +148,26 @@
 
         return $retour;
     }
+
+    function get_date($id_objet) {
+        $base = connexion();
+
+        $prompt = 
+        "SELECT date_emprunt FROM b_emprunt b_emp
+        WHERE id_objet = %s";
+
+        $result = mysqli_query($base,$prompt);
+
+        $resultat = mysqli_fetch_assoc($result);
+
+        return $resultat['date_emprunt'];
+    }
+
+    function mi_calcul($qlq,$nbjour) {
+
+        $val = get_date($qlq);
+        $valiny = $val - $nbjiou;
+
+        return $valiny;
+    }
 ?>
