@@ -1,6 +1,12 @@
 <?php 
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_GET['error'] == 1) {
-    echo "Veuillez remplir le formulaire correctement.";
+    ini_set('display_errors', "0"); 
+if ($_SERVER['REQUEST_METHOD'] === 'GET') 
+{
+    if($_GET['error'] == 1)
+    {
+        echo "Veuillez remplir le formulaire correctement.";
+    }
+
 }
 ?>
 
