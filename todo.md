@@ -19,3 +19,11 @@
         -Filtre par catégorie []
                 -Fonction[x]
     - CSS globale []
+
+# - Version 2 : 
+    - Amélioration du design []
+        - Filtre.php [x]
+        - Inscription.php [x]
+        - Liste_objet.php [x]
+        - Login.php [x]
+    - 
