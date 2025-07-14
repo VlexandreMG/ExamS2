@@ -1,0 +1,12 @@
+# - Version 1 : 
+    - Création de la base et des données test [x]
+        - Membre [x]
+        - Categorie obj [x]
+        - obj [x]
+        - image obj [x] 
+        - emprunt [x] 
+    - Création des pages []
+        -Login []
+        -Inscription []
+        -Liste des objets []
+        -Filtre par catégorie []
