@@ -1,3 +1,9 @@
+<?php 
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_GET['error'] == 1) {
+    echo "Veuillez remplir le formulaire correctement.";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

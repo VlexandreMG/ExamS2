@@ -19,6 +19,6 @@ if(isset($nom) && isset($date_naissace) && isset($email) && isset($mdp) && isset
 }
 else
 {
-    echo "Tsisy";
+    header('Location: ../PAGE/Inscription.php?error=1');;
 }
 ?>

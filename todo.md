@@ -13,4 +13,7 @@
             -Fonction [x]
             -Message d'erreur [x]
         -Liste des objets []
+            -Fonction []
+                - Vue globale []
+            
         -Filtre par catégorie []

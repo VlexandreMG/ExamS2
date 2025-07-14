@@ -10,11 +10,11 @@
 
     if($membre['email'] == null || $membre['mdp'] == null)
     {
-        header('Location: ');
+        header('Location: ../PAGE/Login.php?error=1');
     }
     else
     {
-        header('');
+        header('Location: ../PAGE/Liste_objet.php');
     }
     
 ?>
